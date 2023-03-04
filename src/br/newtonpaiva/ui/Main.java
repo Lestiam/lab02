@@ -21,7 +21,8 @@ public class Main {
         System.out.println("O valor do seu saldo é : " + c2.getSaldo());
         System.out.println("O número da sua conta é: " + c2.getNumero());
 
-        Conta c3 = new Conta();
+        Conta c3 = new Conta(20,100.0);
+        c3.sacar(200.0);
 
 //        if(c.equals(c2))
 //            System.out.println("\nMesma conta");

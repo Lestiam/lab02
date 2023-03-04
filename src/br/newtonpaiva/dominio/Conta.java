@@ -23,14 +23,30 @@ public class Conta {
     }
 
     public Double sacar (Double valor){
-        return 0.0;
+        if(valor == null || saldo <= 0)
+            throw new IllegalArgumentException("Saldo insuficiente na conta");
+
+        saldo -= valor;
+        return saldo;
     }
 
     public Double depositar (Double valor){
         if (valor == null || valor <= 0)
             throw new IllegalArgumentException("Valor menor que zero");
+
         saldo += valor;
         return saldo;
+    }
+
+    public void transferir(Conta destino, Double valor){
+        if(this.getSaldo() < valor)
+            throw new IllegalArgumentException("Erro, saldo inválido");
+
+        if(this.equals(destino))
+            throw new IllegalArgumentException("Erro, não pode transferir para a mesma conta");
+
+        this.sacar(valor);
+        destino.depositar(valor);
     }
 
 
