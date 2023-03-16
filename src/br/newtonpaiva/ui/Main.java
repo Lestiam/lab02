@@ -30,5 +30,7 @@ public class Main {
 //            System.out.println("\nContas diferentes");
 
         System.out.println((c.equals(c2)) ? ("\nMesma conta") : ("\nContas diferentes"));
+
+        System.out.println("Você possui " + c.getSaldo() + " reais de saldo em sua conta");
     }
 }
