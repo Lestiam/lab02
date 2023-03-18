@@ -1,6 +1,9 @@
 package br.newtonpaiva.ui;
 
 import br.newtonpaiva.dominio.Conta;
+import br.newtonpaiva.dominio.Pessoa;
+import br.newtonpaiva.dominio.PessoaFisica;
+import br.newtonpaiva.dominio.PessoaJuridica;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,5 +35,20 @@ public class Main {
         System.out.println((c.equals(c2)) ? ("\nMesma conta") : ("\nContas diferentes"));
 
         System.out.println("Você possui " + c.getSaldo() + " reais de saldo em sua conta");
+
+        //Pessoa p = new Pessoa() {
+
+
+
+            Pessoa pessoas[] = new Pessoa[4];
+            pessoas[0] = new PessoaFisica();
+            pessoas[1] = new PessoaJuridica();
+            pessoas[2] = new PessoaJuridica();
+            pessoas[3] = new PessoaFisica();
+
+            for (Pessoa p : pessoas)
+                p.validarDocumento();
+        }
     }
-}
+
+

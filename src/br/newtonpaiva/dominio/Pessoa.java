@@ -1,10 +1,10 @@
 package br.newtonpaiva.dominio;
 
-public class Pessoa {
+public abstract class Pessoa {
     private String nome;
 
-    public void validarDocumento(){
-    }
+    public abstract void validarDocumento();
+
 
     public String getNome() {
         return nome;

@@ -25,4 +25,10 @@ public class PessoaFisica extends Pessoa{
     public int hashCode() {
         return Objects.hash(cpf);
     }
+
+    @Override
+    public void validarDocumento() {
+
+        System.out.println("Validando CPF");
+    }
 }
