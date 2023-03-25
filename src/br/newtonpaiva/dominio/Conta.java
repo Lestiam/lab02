@@ -5,6 +5,15 @@ import java.util.Objects;
 public class Conta {
     private Integer numero;
     private Double saldo;
+    private Pessoa pessoa;
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
 
     //construtores
     public Conta(){
